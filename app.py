@@ -6,6 +6,7 @@ import unicodedata
 st.set_page_config(page_title="Ellenco | Portal de TI", page_icon="🔗", layout="wide")
 
 PORTAIS = [
+    ('Ocomon', 'Suporte', 'Central de chamados internos da TI.', 'http://suporte/ec/', 'OC'),
     ('Chamados TOTVS', 'Suporte', 'Abertura e acompanhamento de chamados.', 'https://suporte.totvs.com/portal/p/10098/customer-portal-dashboard', 'TO'),
     ('Chamados SISMA', 'Suporte', 'Central de atendimento SISMA.', 'https://assisteweb.trace.com.br/TraceGP/indexPopup.jsp', 'SI'),
     ('Meu RH', 'Pessoas', 'Acesso ao portal do colaborador.', 'https://meurh.ellenco.com.br/web/app/RH/PortalMeuRH/#/login', 'RH'),
