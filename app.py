@@ -15,6 +15,7 @@ PORTAIS = [
     ('Carol Conect', 'Clockin', 'Conexão Clockin • requer acesso à rede interna.', 'http://100.64.251.231:8880/ui/login', 'CC'),
     ('Carol Backoffice', 'Clockin', 'Acesso ao painel Clockin.', 'https://ellenco.carol.ai/ellenco/apps/clockinapp/12.1.26100000/index.html#/dashboard', 'CB'),
     ('Carol ADM', 'Clockin', 'Administração do ambiente Carol.', 'https://ellenco.carol.ai/auth/login?env=ellenco&redirect=%2Fellenco%2Fcarol-ui%2Fcarol-app%2F8898a01454d745539c7f7ea9450fb6b9%2Fsettings', 'CA'),
+    ('Painel de Controle Locaweb', 'E-mail', 'Administração dos e-mails da Ellenco.', 'https://login-new.locaweb.com.br/login?service=https%3A%2F%2Fpainel-email.locaweb.com.br%2Fdomains%2Fellenco.com.br%2Fgroups%3Fpage%3D7', 'LW'),
 ]
 
 st.markdown("""<style>
@@ -59,6 +60,7 @@ def normalize(text):
 filtered = [p for p in PORTAIS if normalize(search.strip()) in normalize(p[0] + " " + p[1])]
 st.caption(f"{len(filtered)} de {len(PORTAIS)} portais")
 COLORS = {
+    "E-mail": ("#f2a9bc", "#402b3e"),
     "Suporte": ("#8ac5ff", "#193653"),
     "Pessoas": ("#c2b0ff", "#2b284c"),
     "Documentos": ("#f3cc88", "#3b3329"),
